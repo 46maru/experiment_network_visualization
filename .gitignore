@@ -1,0 +1,10 @@
+.env
+
+neo4j/data/*
+neo4j/data/databases/*
+neo4j/data/transactions/*
+
+neo4j/logs/*
+
+!neo4j/data/.gitkeep
+!neo4j/logs/.gitkeep

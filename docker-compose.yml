@@ -1,0 +1,27 @@
+services:
+  neo4j:
+    image: neo4j:5.26.0
+    ports:
+      - 7474:7474
+      - 7687:7687
+    volumes:
+      - ./neo4j/data:/data
+      - ./neo4j/logs:/logs
+    networks:
+      - neo4j_network
+
+  python:
+    build: 
+      context: .
+      dockerfile: docker/Dockerfile
+    tty: true
+    volumes:
+      - ./src/:/workspace
+    depends_on:
+      - neo4j
+    networks:
+      - neo4j_network
+
+networks:
+  neo4j_network:
+    driver: bridge

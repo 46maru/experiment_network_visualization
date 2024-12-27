@@ -1,0 +1,4 @@
+neo4j-driver==5.26.0
+python-dotenv==1.0.1
+pytz==2024.2
+setuptools==75.6.0
