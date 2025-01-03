@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv('.env')
 
 URI = os.getenv("URI")
-print(URI)
+
 AUTH = (os.getenv("USER"), os.getenv("PASSWORD"))
 
 people = [{"name": "Alice", "age": 42, "friends": ["Bob", "Peter", "Anna"]},
